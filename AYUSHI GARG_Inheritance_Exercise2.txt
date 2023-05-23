@@ -1,0 +1,32 @@
+class MobilePhone:
+    def __init__(self, brand, model, color, price):
+        self.brand = brand
+        self.model = model
+        self.color = color
+        self.price = price
+        
+    def call(self, number):
+        print(f"Calling {number}...")
+        
+    def send_message(self, number, message):
+        print(f"Sending message '{message}' to {number}...")
+class iPhone14(MobilePhone):
+    def __init__(self, color, storage):
+        super().__init__("Apple", "iPhone 14", color, 999)
+        self.storage = storage
+        
+    def face_id(self):
+        print("Scanning face for Face ID...")
+        
+    def take_photo(self):
+        print("Taking a photo with the iPhone 14 camera...")
+my_iphone = iPhone14("silver", "256GB")
+print(my_iphone.brand)  # Output: Apple
+print(my_iphone.model)  # Output: iPhone 14
+print(my_iphone.color)  # Output: silver
+print(my_iphone.storage)  # Output: 256GB
+my_iphone.face_id()  # Output: Scanning face for Face ID...
+my_iphone.take_photo()  # Output: Taking a photo with the iPhone 14 camera...
+my_iphone.call("123-456-7890")  # Output: Calling 123-456-7890...
+my_iphone.send_message("123-456-7890", "Hello, this is a message.")  # Output: Sending message 'Hello, this is a message.' to 123-456-7890...
+
